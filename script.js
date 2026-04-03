@@ -140,4 +140,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---- Team Swiper Carousel ----
+  if (typeof Swiper !== 'undefined') {
+    new Swiper('.team-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      loop: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next.team-nav-btn',
+        prevEl: '.swiper-button-prev.team-nav-btn',
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 24,
+        }
+      }
+    });
+  }
+
 });
